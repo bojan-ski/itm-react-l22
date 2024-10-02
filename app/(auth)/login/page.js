@@ -3,19 +3,40 @@
 import PageHeader from '@/components/PageHeader'
 import FormInput from '@/components/FormInput'
 import FormBtnContainer from '@/components/FormBtnContainer'
+import { loginUser } from '@/lib/loginUser'
 
 const Login = () => {
+
+    const handleLoginSubmit = async e => {
+        e.preventDefault()
+
+        const username = e.target.elements[0].value
+        const password = e.target.elements[1].value
+
+        const response = await loginUser(username, password)
+        // console.log(response);
+
+        if (response) {
+            console.log('You have successfully logged in');
+            e.target.elements[0].value = ''
+            e.target.elements[1].value = ''
+        }else{
+            throw new Error('some thing went wrong')
+        }        
+    }
+
+
     return (
         <div className='login-page'>
-            <PageHeader text='Login'/>
+            <PageHeader text='Login' />
 
             <section className="login-feature">
-                <form className="login-form">
-                    <FormInput name='username' title='Username' type='text'/>
+                <form className="login-form" onSubmit={handleLoginSubmit}>
+                    <FormInput name='username' title='Username' type='text' />
 
-                    <FormInput name='password' title='Password' type='password'/>
+                    <FormInput name='password' title='Password' type='password' />
 
-                    <FormBtnContainer btnOne='Login' btnTwo='Cancel'/>
+                    <FormBtnContainer btnOne='Login' btnTwo='Cancel' />
                 </form>
             </section>
 
