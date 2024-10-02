@@ -1,7 +1,6 @@
-const saveUserCredentials = (username, password) => {
-  return (
-    <div>saveUserCredentials</div>
-  )
+const saveUserCredentials = (username, password, userToken) => {
+    const userCredentials = { username, password, userToken }
+    localStorage.setItem("userCredentials", JSON.stringify(userCredentials));
 }
 
 export default saveUserCredentials

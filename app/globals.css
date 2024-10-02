@@ -47,7 +47,17 @@ header {
   color: #000;
 }
 
-.navbar .nav-link:active{
+.navbar .log-out-btn{
+  padding: 10px 12px;
+  margin: 0 15px;
+  border-radius: 7px;
+  border: none;
+  background-color: firebrick;
+  color: #fff;
+}
+
+.navbar .nav-link:active,
+.navbar .log-out-btn:active{
   transform: scale(0.9);
 }
 

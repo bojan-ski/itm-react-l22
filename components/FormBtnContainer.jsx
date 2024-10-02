@@ -1,6 +1,6 @@
 import { resetForm } from "@/utils/resetForm"
 
-const FormBtnContainer = ({btnOne, btnTwo}) => {
+const FormBtnContainer = ({btnOne, btnTwo}) => {    
     return (
         <div className="btn-container">
             <button type="submit" className="submit-btn">
