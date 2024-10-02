@@ -39,6 +39,8 @@ const SearchBar = () => {
 
     }, [searchTerm]);
 
+    if(pathname == '/login') return  
+
     return (
         <>
             <div className="search-bar">

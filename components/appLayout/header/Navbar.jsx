@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-const Navbar = () => {
+const Navbar = () => { 
     return (
         <nav className="navbar">
             <Link href='/' className="nav-link">

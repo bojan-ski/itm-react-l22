@@ -1,4 +1,5 @@
 // components
+import PageHeader from "@/components/PageHeader";
 import ProductListCard from "@/components/ProductListCard";
 import NoDataAvailable from "@/components/NoDataAvailable";
 
@@ -10,7 +11,7 @@ const Home = async () => {
 
   return (
     <>      
-      <h1>Products</h1>
+      <PageHeader text='Products'/>
 
       <section className="products">
         {productsListData ? (

@@ -3,39 +3,29 @@
 import { postNewProductAction } from "@/lib/actions"
 // utils
 import { resetForm } from "@/utils/resetForm"
+// components 
+import PageHeader from "@/components/PageHeader"
+import FormBtnContainer from "@/components/FormBtnContainer"
+import FormInput from "@/components/FormInput"
 
 
 const RegisterProduct = () => {
     return (
         <div className="register-product-page">
-            <h1>Register Product</h1>
+            <PageHeader text='Register Product' />
 
             <section className="register-product-feature">
                 <form action={(formData) => {
                     postNewProductAction(formData)
                     resetForm()
                 }} className="add-product-form">
-                    <label htmlFor="productTitle">
-                        Title:
-                    </label>
-                    <input type="text" name="productTitle" required />
-                    <label htmlFor="productDescription">
-                        Description:
-                    </label>
-                    <input type="text" name="productDescription" required />
-                    <label htmlFor="productTitle">
-                        Price:
-                    </label>
-                    <input type="number" name="productPrice" required />
+                    <FormInput name='productTitle' title='Title' type='text' />
 
-                    <div className="btn-container">
-                        <button type="submit" className="submit-btn">
-                            Create Product
-                        </button>
-                        <button type="button" className="cancel-btn" onClick={() => resetForm()}>
-                            Cancel
-                        </button>
-                    </div>
+                    <FormInput name='productDescription' title='Description' type='text' />
+
+                    <FormInput name='productPrice' title='Price' type='number' />
+
+                    <FormBtnContainer btnOne='Add Product' btnTwo='Cancel'/>
                 </form>
             </section>
         </div>

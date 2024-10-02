@@ -150,7 +150,8 @@ main {
   margin-top: 10px;
 }
 
-/* register product page */
+/* register product page & login page */
+.login-page .login-feature,
 .register-product-page .register-product-feature {
   background-color: #fff;
   width: 50%;
@@ -159,7 +160,8 @@ main {
   padding: 20px 25px;
 }
 
-.register-product-page .register-product-feature input {
+.add-product-form input,
+.login-form input {
   display: block;
   height: 35px;
   width: 100%;
@@ -169,13 +171,15 @@ main {
   border: 1px solid #000;
 }
 
-.register-product-page .register-product-feature .btn-container {
+.login-form .btn-container,
+.add-product-form .btn-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.register-product-page .register-product-feature .btn-container button {
+.login-form .btn-container button, 
+.add-product-form .btn-container button {
   font-size: 14px;
   color: #fff;
   text-decoration: none;
@@ -185,15 +189,18 @@ main {
   cursor: pointer;
 }
 
-.register-product-page .register-product-feature .btn-container button:active {
+.login-form .btn-container button:active,
+.add-product-form .btn-container button:active {
   transform: scale(0.9);
 }
 
-.register-product-page .register-product-feature .btn-container .submit-btn {
+.login-form .btn-container .submit-btn,
+.add-product-form .btn-container .submit-btn {
   background-color: green;
 }
 
-.register-product-page .register-product-feature .btn-container .cancel-btn {
+.login-form .btn-container .cancel-btn,
+.add-product-form .btn-container .cancel-btn {
   background-color: red;
 }
 
