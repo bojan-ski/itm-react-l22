@@ -5,11 +5,13 @@ import NoDataAvailable from "@/components/NoDataAvailable";
 // export const revalidate = 0;
 
 const Home = async () => {
-  const apiCall = await fetch('http://localhost:3000/api/products', {method: "GET"}) 
+  const apiCall = await fetch('http://localhost:3000/api/products', { method: "GET" })
   const productsListData = await apiCall.json()
-  
+
   return (
     <>
+      {/* LINK TO REGISTER */}
+      
       <h1>Products</h1>
 
       <section className="products">
