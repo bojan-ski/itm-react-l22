@@ -5,25 +5,54 @@
   margin: 0;
 }
 
-body{
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: #eee;
-  width: 1200px;
-  padding: 20px 0;
-  margin: 0 auto;
 }
 
-h1{
+h1 {
   text-align: center;
   margin-bottom: 25px;
 }
 
-span{
+span {
   font-weight: 600;
 }
 
+a{
+  text-decoration: none;
+}
+
+/* HEADER */
+header {
+  background-color: blanchedalmond;
+  padding: 15px 0;
+}
+
 /* COMPONENTS */
+/* navbar */
+.navbar {
+  margin: 7px auto;
+  text-align: center;
+}
+
+.navbar .nav-link{
+  display: inline-block;
+  padding: 7px 10px;
+  margin: 0 15px;
+  border-radius: 7px;
+  background-color: burlywood;
+  color: #000;
+}
+
+.navbar .nav-link:active{
+  transform: scale(0.9);
+}
+
 /* search bar */
-.search-bar{
+.search-bar {
   margin: 20px 0;
   text-align: center;
 }
@@ -36,7 +65,7 @@ span{
   border-radius: 5px;
 }
 
-.searchResultsList{
+.searchResultsList {
   width: 75%;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -44,30 +73,38 @@ span{
   padding: 10px 15px;
 }
 
-.searchResultsList .searchResultItem{
+.searchResultsList .searchResultItem {
   display: inline;
   margin: 15px 20px;
 }
 
-.searchResultsList .searchResultItem:hover{
+.searchResultsList .searchResultItem:hover {
   color: grey;
   cursor: pointer;
 }
 
-.searchResultsList .searchResultItem:first-child{
+.searchResultsList .searchResultItem:first-child {
   margin-left: 0;
+}
+
+/* MAIN */
+main {
+  flex: 1;
+  width: 1200px;
+  padding: 20px 0;
+  margin: 0 auto;
 }
 
 /* PAGES */
 /* home page*/
-.products{
+.products {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.products .card{
+.products .card {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
@@ -75,11 +112,11 @@ span{
 
 .products .card h4,
 .products .card p,
-.product-data p{
+.product-data p {
   margin: 10px 0;
 }
 
-.products .card .btn{
+.products .card .btn {
   display: inline-block;
   background-color: steelblue;
   color: #fff;
@@ -90,20 +127,20 @@ span{
 }
 
 .products .card .btn:hover,
-.product-details .btn-back:hover{
+.product-details .btn-back:hover {
   background-color: rgb(67, 102, 131);
 }
 
 /* selected product - productID page */
-.product-details{
+.product-details {
   background-color: #f7f7f7;
   display: flex;
   gap: 20px;
   align-items: center;
 }
 
-.btn-back{
-  display: inline-block;  
+.btn-back {
+  display: inline-block;
   background-color: steelblue;
   color: #fff;
   text-decoration: none;
@@ -114,7 +151,7 @@ span{
 }
 
 /* register product page */
-.register-product-page .register-product-feature{
+.register-product-page .register-product-feature {
   background-color: #fff;
   width: 50%;
   margin: 0 auto;
@@ -122,7 +159,7 @@ span{
   padding: 20px 25px;
 }
 
-.register-product-page .register-product-feature input{
+.register-product-page .register-product-feature input {
   display: block;
   height: 35px;
   width: 100%;
@@ -132,13 +169,13 @@ span{
   border: 1px solid #000;
 }
 
-.register-product-page .register-product-feature .btn-container{
+.register-product-page .register-product-feature .btn-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.register-product-page .register-product-feature .btn-container button{
+.register-product-page .register-product-feature .btn-container button {
   font-size: 14px;
   color: #fff;
   text-decoration: none;
@@ -148,21 +185,21 @@ span{
   cursor: pointer;
 }
 
-.register-product-page .register-product-feature .btn-container button:active{
-  transform: scale(.9);
+.register-product-page .register-product-feature .btn-container button:active {
+  transform: scale(0.9);
 }
 
-.register-product-page .register-product-feature .btn-container .submit-btn{
+.register-product-page .register-product-feature .btn-container .submit-btn {
   background-color: green;
 }
 
-.register-product-page .register-product-feature .btn-container .cancel-btn{
+.register-product-page .register-product-feature .btn-container .cancel-btn {
   background-color: red;
 }
 
 /* not-found page & error page */
 .not-found-page,
-.error-page{
+.error-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,7 +207,7 @@ span{
 }
 
 /* error page */
-.error-page .reset-btn{
+.error-page .reset-btn {
   margin-top: 20px;
   padding: 10px 20px;
   background-color: yellowgreen;

@@ -9,9 +9,7 @@ const Home = async () => {
   const productsListData = await apiCall.json()
 
   return (
-    <>
-      {/* LINK TO REGISTER */}
-      
+    <>      
       <h1>Products</h1>
 
       <section className="products">

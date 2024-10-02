@@ -43,7 +43,7 @@ const SearchBar = () => {
         <>
             <div className="search-bar">
                 <form>
-                    <input type="text" name="searchTerm" onChange={e => setSearchTerm(e.target.value)} />
+                    <input type="text" name="searchTerm" onChange={e => setSearchTerm(e.target.value)} placeholder="Enter product title"/>
                 </form>
             </div>
 
